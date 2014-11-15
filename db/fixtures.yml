@@ -156,28 +156,46 @@ load_players:
     - 1
     - 2
     - 3
+    slots:
+    - 1
+    - 2
 load_items:
   1:
     id: 1
     title: Flaming Axe
-    type: Axe
+    type: Weapon
   2:
     id: 2
     title: Throwing Spear
-    type: Distance
+    type: Weapon
   3:
     id: 3
     title: Poisoned Knife
-    type: Sword
+    type: Weapon
   4:
     id: 4
     title: Board Sword
-    type: Sword
+    type: Weapon
   5:
     id: 5
     title: Brass Knuckles
-    type: Fist
+    type: Weapon
   6:
     id: 6
     title: Crossbow
-    type: Distance
+    type: Weapon
+  7:
+    id: 7
+    title: Knight Armor
+    type: Armor
+load_slots:
+  1:
+    id: 1
+    item: 1
+    player: 1
+    type: Weapon
+  2:
+    id: 2
+    item: 7
+    player: 1
+    type: Armor

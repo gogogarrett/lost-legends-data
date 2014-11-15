@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :battles, only: [:show]
       resources :players, only: [:show, :update]
       resources :items,   only: [:index, :show]
+      resources :slots,   only: [:index, :show, :update]
     end
   end
 end

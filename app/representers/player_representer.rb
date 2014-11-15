@@ -9,4 +9,5 @@ module PlayerRepresenter
   property :hunts
   property :rubies
   collection :items
+  collection :slots
 end
