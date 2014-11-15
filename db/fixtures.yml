@@ -3,6 +3,7 @@ load_zones:
     id: 1
     title: Zone1
     desc: This is the zone1 - welcome
+    battle: false
     parent:
     root: true
     zones:
@@ -15,6 +16,7 @@ load_zones:
     id: 2
     title: Zone2
     desc: This is the zone2 - welcome
+    battle: false
     parent: 1
     zones:
     - 4
@@ -23,6 +25,7 @@ load_zones:
     id: 3
     title: Zone3
     desc: This is the zone3 - welcome
+    battle: false
     parent: 1
     zones:
     - 6
@@ -33,18 +36,21 @@ load_zones:
     id: 4
     title: Zone4
     desc: This is the zone4 - welcome - you've found a deadend
+    battle: false
     parent: 2
     zones:
   5:
     id: 5
     title: Zone5
     desc: This is the zone5 - welcome - you've found a deadend
+    battle: false
     parent: 2
     zones:
   6:
     id: 6
     title: Zone6
     desc: This is the zone6 - welcome
+    battle: false
     parent: 3
     zones:
     - 13
@@ -53,12 +59,14 @@ load_zones:
     id: 7
     title: Zone7
     desc: This is the zone7 - welcome - you've found a battle!
+    battle: true
     parent: 3
     zones:
   8:
     id: 8
     title: Zone8
     desc: This is the zone8 - welcome - you've found a deadend
+    battle: false
     parent: 1
     zones:
     - 15
@@ -66,41 +74,73 @@ load_zones:
     id: 9
     title: Zone9
     desc: This is the zone9 - welcome - you've found a deadend
+    battle: false
     parent: 1
     zones:
   10:
     id: 10
     title: Zone10
     desc: This is the zone10 - welcome - you've found a deadend
+    battle: false
     parent: 1
     zones:
   11:
     id: 11
     title: Zone11
     desc: This is the zone11 - welcome - you've found a battle!
+    battle: true
     parent: 3
     zones:
   12:
     id: 12
     title: Zone12
     desc: This is the zone12 - welcome - you've found a battle!
+    battle: true
     parent: 3
     zones:
   13:
     id: 13
     title: Zone13
     desc: This is the zone13 - welcome - you've found a battle!
+    battle: true
     parent: 6
     zones:
   14:
     id: 14
     title: Zone14
     desc: This is the zone14 - welcome - you've found a battle!
+    battle: true
     parent: 6
     zones:
   15:
     id: 15
     title: Zone15
     desc: This is the zone15 - welcome - you've found a battle!
+    battle: true
     parent: 8
     zones:
+load_battles:
+  7:
+    id: 7
+    zone: 3
+    level: 1
+  11:
+    id: 11
+    zone: 3
+    level: 2
+  12:
+    id: 12
+    zone: 3
+    level: 3
+  13:
+    id: 13
+    zone: 6
+    level: 1
+  14:
+    id: 14
+    zone: 6
+    level: 3
+  15:
+    id: 15
+    zone: 8
+    level: 2
