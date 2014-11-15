@@ -1,0 +1,106 @@
+load_zones:
+  1:
+    id: 1
+    title: Zone1
+    desc: This is the zone1 - welcome
+    parent:
+    root: true
+    zones:
+    - 2
+    - 3
+    - 8
+    - 9
+    - 10
+  2:
+    id: 2
+    title: Zone2
+    desc: This is the zone2 - welcome
+    parent: 1
+    zones:
+    - 4
+    - 5
+  3:
+    id: 3
+    title: Zone3
+    desc: This is the zone3 - welcome
+    parent: 1
+    zones:
+    - 6
+    - 7
+    - 11
+    - 12
+  4:
+    id: 4
+    title: Zone4
+    desc: This is the zone4 - welcome - you've found a deadend
+    parent: 2
+    zones:
+  5:
+    id: 5
+    title: Zone5
+    desc: This is the zone5 - welcome - you've found a deadend
+    parent: 2
+    zones:
+  6:
+    id: 6
+    title: Zone6
+    desc: This is the zone6 - welcome
+    parent: 3
+    zones:
+    - 13
+    - 14
+  7:
+    id: 7
+    title: Zone7
+    desc: This is the zone7 - welcome - you've found a battle!
+    parent: 3
+    zones:
+  8:
+    id: 8
+    title: Zone8
+    desc: This is the zone8 - welcome - you've found a deadend
+    parent: 1
+    zones:
+    - 15
+  9:
+    id: 9
+    title: Zone9
+    desc: This is the zone9 - welcome - you've found a deadend
+    parent: 1
+    zones:
+  10:
+    id: 10
+    title: Zone10
+    desc: This is the zone10 - welcome - you've found a deadend
+    parent: 1
+    zones:
+  11:
+    id: 11
+    title: Zone11
+    desc: This is the zone11 - welcome - you've found a battle!
+    parent: 3
+    zones:
+  12:
+    id: 12
+    title: Zone12
+    desc: This is the zone12 - welcome - you've found a battle!
+    parent: 3
+    zones:
+  13:
+    id: 13
+    title: Zone13
+    desc: This is the zone13 - welcome - you've found a battle!
+    parent: 6
+    zones:
+  14:
+    id: 14
+    title: Zone14
+    desc: This is the zone14 - welcome - you've found a battle!
+    parent: 6
+    zones:
+  15:
+    id: 15
+    title: Zone15
+    desc: This is the zone15 - welcome - you've found a battle!
+    parent: 8
+    zones:
