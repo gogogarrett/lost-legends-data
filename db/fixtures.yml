@@ -152,3 +152,32 @@ load_players:
     hunts: 20
     rubies: 100
     level: 1
+    items:
+    - 1
+    - 2
+    - 3
+load_items:
+  1:
+    id: 1
+    title: Flaming Axe
+    type: Axe
+  2:
+    id: 2
+    title: Throwing Spear
+    type: Distance
+  3:
+    id: 3
+    title: Poisoned Knife
+    type: Sword
+  4:
+    id: 4
+    title: Board Sword
+    type: Sword
+  5:
+    id: 5
+    title: Brass Knuckles
+    type: Fist
+  6:
+    id: 6
+    title: Crossbow
+    type: Distance
