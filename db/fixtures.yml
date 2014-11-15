@@ -144,3 +144,11 @@ load_battles:
     id: 15
     zone: 8
     level: 2
+load_players:
+  1:
+    id: 1
+    title: GoGoGarrett
+    exp: 20
+    hunts: 20
+    rubies: 100
+    level: 1
