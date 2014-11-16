@@ -28,7 +28,7 @@ module Service
     end
 
     def reward_random_weapon
-      [(1..6).to_a.sample]
+      [Item.all.map(&:id) - player.items.map(&:id)].flatten.sample
     end
 
   end
