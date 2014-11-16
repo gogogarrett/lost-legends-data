@@ -29,13 +29,18 @@ module Api
         render json: slot_json
       end
 
-
       def update
         slot = Slot.find(params[:id])
         slot.update(params[:slot])
         slot_json = ::SlotRepresenter.prepare(slot).to_json(wrap: :slot)
 
         respond_with slot_json
+      end
+
+      def destroy
+        slot = Slot.find(params[:id])
+        slot.destroy
+        head 200
       end
 
       private
