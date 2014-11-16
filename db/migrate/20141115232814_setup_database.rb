@@ -3,10 +3,16 @@ class SetupDatabase < ActiveRecord::Migration
 
     create_table :players do |t|
       t.string    :title
-      t.integer   :exp,      null: false, default: 0
-      t.integer   :hunts,    null: false, default: 0
-      t.integer   :rubies,   null: false, default: 0
-      t.integer   :level,    null: false, default: 0
+      t.integer   :exp,         null: false, default: 0
+      t.integer   :hunts,       null: false, default: 0
+      t.integer   :rubies,      null: false, default: 0
+      t.integer   :level,       null: false, default: 0
+
+      t.integer   :muscle,      null: false, default: 0
+      t.integer   :intellect,   null: false, default: 0
+      t.integer   :defense,     null: false, default: 0
+
+      t.integer   :spending_points, null: false, default: 3
 
       t.timestamps
     end
