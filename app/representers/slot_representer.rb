@@ -4,7 +4,11 @@ module SlotRepresenter
   include Representable::JSON
 
   property :id
-  property :item
+  property :item_id, as: :item
   property :player
-  property :type
+  property :item_type, as: :type
+
+  def player
+    super.id
+  end
 end
