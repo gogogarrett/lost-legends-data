@@ -10,19 +10,12 @@ player = Player.create(title: "GoGoGarrett", exp: 0, hunts: 20, rubies: 10, leve
 # weapons
 item1 = Item.find(1)
 item2 = Item.find(2)
-item3 = Item.find(3)
-item4 = Item.find(4)
 
 # armor
 item7 = Item.find(7)
 
 
 player.slots.create(item_id: item1.id, item_type: item1.type)
-player.slots.create(item_id: item2.id, item_type: item2.type)
+player.slots.create(item_id: item7.id, item_type: item7.type)
 
-player.inventories.create(item_id: item1.id, item_type: item1.type)
 player.inventories.create(item_id: item2.id, item_type: item2.type)
-player.inventories.create(item_id: item3.id, item_type: item3.type)
-player.inventories.create(item_id: item4.id, item_type: item4.type)
-
-player.inventories.create(item_id: item7.id, item_type: item7.type)
