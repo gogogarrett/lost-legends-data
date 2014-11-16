@@ -12,7 +12,7 @@ module Api
 
       def update
         player = Player.find(params[:id])
-        player = Service::UpdatePlayer.new(player, player_params).call
+        player.update(player_params)
         player_json = ::PlayerRepresenter.prepare(player).to_json(wrap: :player)
 
         respond_with player_json
