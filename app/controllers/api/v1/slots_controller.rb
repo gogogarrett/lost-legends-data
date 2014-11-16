@@ -22,12 +22,25 @@ module Api
         respond_with slot_json
       end
 
+      def create
+        slot = Slot.create(slot_params)
+        slot_json = ::SlotRepresenter.prepare(slot).to_json(wrap: :slot)
+
+        render json: slot_json
+      end
+
+
       def update
         slot = Slot.find(params[:id])
         slot.update(params[:slot])
         slot_json = ::SlotRepresenter.prepare(slot).to_json(wrap: :slot)
 
         respond_with slot_json
+      end
+
+      private
+      def slot_params
+        params.require(:slot).permit!
       end
     end
   end
