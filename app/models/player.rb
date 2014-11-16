@@ -8,11 +8,9 @@ class Player < ActiveRecord::Base
     end
   end
 
-
   def equipped_items
     slots.map(&:item_id).map do |item_id|
       Item.find(item_id)
     end
   end
-
 end
