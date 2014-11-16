@@ -9,6 +9,6 @@ module PlayerRepresenter
   property :hunts
   property :rubies
 
-  property :items, getter:          -> (args) { represented.items.map(&:id) }
-  property :equipped_items, getter: -> (args) { represented.equipped_items.map(&:id) }
+  property :items, getter: -> (args) { represented.items.map(&:id) }
+  property :slots, getter: -> (args) { represented.slots.map(&:id) }
 end
