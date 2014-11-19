@@ -5,7 +5,6 @@ module PlayerRepresenter
 
   property :id
   property :title
-  property :exp
   property :hunts
   property :rubies
 
@@ -16,4 +15,9 @@ module PlayerRepresenter
 
   property :slots, getter: -> (args) { represented.slots.map(&:id) }
   property :inventories, getter: -> (args) { represented.inventories.map(&:id) }
+
+  property :exp
+  property :level
+
+  property :level_progress, getter: -> (args) { CalculatePlayerExp.new(self).exp_percent }
 end
