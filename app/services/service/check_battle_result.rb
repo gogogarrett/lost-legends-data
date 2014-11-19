@@ -1,12 +1,12 @@
 module Service
   class CheckBattleResult
 
-    def initialize(player, battle)
-      @player, @battle = player, battle
+    def initialize(player, battle_level)
+      @player, @battle_level = player, battle_level
     end
 
     def call
-      if player_level >= battle_level
+      if good_odds?
         check_luckliness(5 + player_level)
       else
         check_luckliness(1 + player_level)
@@ -14,7 +14,11 @@ module Service
     end
 
     private
-    attr_reader :player, :battle
+    attr_reader :player, :battle_level
+
+    def good_odds?
+      player_level >= battle_level
+    end
 
     def check_luckliness(win_chances)
       odds = []
@@ -25,10 +29,6 @@ module Service
 
     def player_level
       player.level
-    end
-
-    def battle_level
-      battle.level
     end
   end
 end
