@@ -124,26 +124,59 @@ load_battles:
     id: 7
     zone: 3
     level: 1
+    monsters:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
   11:
     id: 11
     zone: 3
     level: 2
+    monsters:
+    - 1
+    - 2
   12:
     id: 12
     zone: 3
     level: 3
+    monsters:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
   13:
     id: 13
     zone: 6
     level: 1
+    monsters:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
   14:
     id: 14
     zone: 6
     level: 3
+    monsters:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
   15:
     id: 15
     zone: 8
     level: 2
+    monsters:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
 load_items:
   1:
     id: 1
@@ -173,14 +206,40 @@ load_items:
     id: 7
     title: Knight Armor
     type: Armor
-load_slots:
+  8:
+    id: 8
+    title: Stapler
+    type: Weapon
+  9:
+    id: 9
+    title: Cargo Shorts
+    type: Armor
+  10:
+    id: 10
+    title: Skinny jeans
+    type: Armor
+  11:
+    id: 11
+    title: Googles
+    type: Armor
+load_monsters:
   1:
     id: 1
-    item: 1
-    player: 1
-    type: Weapon
+    title: Will Rax
+    desc: I don't know man... ember?
   2:
     id: 2
-    item: 7
-    player: 1
-    type: Armor
+    title: Bill Nye
+    desc: I'm awesome.
+  3:
+    id: 3
+    title: JoHn Rowe
+    desc: I'm sailing dangerously!
+  4:
+    id: 4
+    title: Martin (aka the boss) Stannard
+    desc: Look at me - I'm a boss.
+  5:
+    id: 5
+    title: A big dark server.
+    desc: Understand me.. Understand me.. (whipers)
