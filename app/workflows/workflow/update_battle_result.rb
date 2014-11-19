@@ -1,5 +1,5 @@
 module Workflow
-  class CreateBattleResult
+  class UpdateBattleResult
 
     def initialize(player_battle, player, params)
       @player_battle, @player, @params = player_battle, player, params
@@ -28,7 +28,7 @@ module Workflow
 
     def build_result(won, rubies, exp)
       OpenStruct.new(id: battle.id, zone: battle.zone, level: battle_level,
-                     won: @won, exp: exp, rubies: rubies, items: items, status: player_battle.status)
+                     won: @won, exp: exp, rubies: rubies, items: items)
     end
 
     def battle
