@@ -22,6 +22,10 @@ module Api
       end
 
       def create
+        # [g] drunken garrett did this.. look into this later.
+        unless itemType = inventory_params[:type]
+          inventory_params.merge!(item_type: "Armor")
+        end
         inventory = Inventory.create(inventory_params)
         inventory_json = ::InventoryRepresenter.prepare(inventory).to_json(wrap: :inventory)
 
