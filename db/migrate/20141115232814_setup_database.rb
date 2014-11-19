@@ -32,5 +32,15 @@ class SetupDatabase < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    create_table :player_battles do |t|
+      t.integer   :battle_id,     null: false
+      t.integer   :player_id,     null: false
+      t.integer   :monster_id,    null: false
+      t.string    :status,        null: false, default: "in-progress"
+
+      t.timestamps
+    end
+
   end
 end

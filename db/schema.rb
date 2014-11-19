@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20141115232814) do
     t.datetime "updated_at"
   end
 
+  create_table "player_battles", force: true do |t|
+    t.integer  "battle_id",                          null: false
+    t.integer  "player_id",                          null: false
+    t.integer  "monster_id",                         null: false
+    t.string   "status",     default: "in-progress", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "players", force: true do |t|
     t.string   "title"
     t.integer  "exp",             default: 0, null: false
