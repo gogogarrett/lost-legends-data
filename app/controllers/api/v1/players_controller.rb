@@ -15,7 +15,7 @@ module Api
         player.update(player_params)
         player_json = ::PlayerRepresenter.prepare(player).to_json(wrap: :player)
 
-        respond_with player_json
+        render json: player_json
       end
 
       private
