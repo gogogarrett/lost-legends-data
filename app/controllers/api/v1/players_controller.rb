@@ -21,7 +21,7 @@ module Api
       private
       def player_params
         # [g] super secure
-        params.require(:player).permit!
+        params.require(:player).permit(:title, :hunts, :rubies, :spending_points, :exp, :muscle, :intellect, :defense)
       end
     end
   end
