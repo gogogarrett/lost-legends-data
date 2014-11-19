@@ -1,27 +1,25 @@
 module Service
   class RewardBase
 
-    def initialize(won, player, battle_level)
-      @won, @player, @battle_level = won, player, battle_level
+    def initialize(player, battle_level)
+      @player, @battle_level = player, battle_level
     end
 
     def call
-      if won
-        case battle_level
-        when 1
-          smallest_array.sample + (player_level * 2)
-        when 2
-          smaller_array.sample + (player_level * 2)
-        when 3
-          small_array.sample + (player_level * 2)
-        else
-          big_array.sample + (player_level * 2)
-        end
+      case battle_level
+      when 1
+        smallest_array.sample
+      when 2
+        smaller_array.sample
+      when 3
+        small_array.sample
+      else
+        big_array.sample
       end
     end
 
-    protected
-    attr_reader :won, :player, :battle_level
+    private
+    attr_reader :player, :battle_level
 
     def smallest_array
       (10..20).to_a
@@ -37,10 +35,6 @@ module Service
 
     def big_array
       (101..1000).to_a
-    end
-
-    def player_level
-      player.level
     end
   end
 end
