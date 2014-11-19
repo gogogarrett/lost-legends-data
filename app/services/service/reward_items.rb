@@ -1,35 +1,21 @@
 module Service
-  class RewardItems
-
-    def initialize(won, player, battle_level)
-      @won, @player, @battle_level = won, player, battle_level
-    end
+  class RewardItems < RewardBase
 
     def call
-      if won
-        case battle_level
-        when 1
-          reward_random_weapon if random_number > 90
-        when 2
-          reward_random_weapon if random_number > 75
-        when 3
-          reward_random_weapon if random_number > 20
-        else
-          reward_random_weapon if random_number > 10
-        end
-      end
+      reward_random_weapon if should_reward?
     end
 
-    protected
-    attr_reader :won, :player, :battle_level
+    private
+    def should_reward?
+      random_number.even?
+    end
 
     def random_number
       (1..100).to_a.sample
     end
 
     def reward_random_weapon
-      [Item.all.map(&:id) - player.items.map(&:id)].flatten.sample
+      [::Item.all.map(&:id) - player.items.map(&:id)].flatten.sample
     end
-
   end
 end

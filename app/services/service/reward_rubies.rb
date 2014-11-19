@@ -1,7 +1,7 @@
 module Service
   class RewardRubies < RewardBase
 
-    protected
+    private
     def smallest_array
       (1..5).to_a
     end
