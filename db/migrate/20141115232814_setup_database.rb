@@ -39,6 +39,8 @@ class SetupDatabase < ActiveRecord::Migration
       t.integer   :monster_id,    null: false
       t.string    :status,        null: false, default: "in-progress"
 
+      t.integer   :monster_health,  null: false
+
       t.timestamps
     end
 
