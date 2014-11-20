@@ -43,8 +43,6 @@ class SetupDatabase < ActiveRecord::Migration
 
       t.integer :monster_health,  null: false
 
-      t.integer   :monster_health,  null: false
-
       t.timestamps
     end
   end
