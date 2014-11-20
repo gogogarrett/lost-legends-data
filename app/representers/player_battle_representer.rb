@@ -10,6 +10,7 @@ module PlayerBattleRepresenter
   property :rubies
   property :status
   property :zone
+  property :monster_health
 
   # property :items
   property :items, getter: -> (args) {
