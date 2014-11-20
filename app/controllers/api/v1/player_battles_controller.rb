@@ -12,7 +12,10 @@ module Api
 
       def create
         monster_id = Service::FindMonsterId.new(player_battle_params[:battle_id]).call
-        player_battle = PlayerBattle.create(player_battle_params.merge(monster_id: monster_id))
+
+        m = Monster.find(monster_id)
+
+        player_battle = PlayerBattle.create(player_battle_params.merge(monster_id: monster_id, monster_health: m.health))
 
         player_battle_json = ::PlayerBattleRepresenter.prepare(player_battle).to_json(wrap: :player_battle, items: [])
 
