@@ -40,6 +40,19 @@ module Api
         head 200
       end
 
+      def attack
+        player_battle = PlayerBattle.find(params[:id])
+        new_health = player_battle.monster_health - 10
+
+        update_hash  = { monster_health: new_health }
+        update_hash[:status] = 'won' if new_health <= 0
+
+        player_battle.update(update_hash)
+
+        player_battle_json = ::PlayerBattleRepresenter.prepare(player_battle).to_json(wrap: :player_battle, items: [])
+        render json: player_battle_json
+      end
+
       private
 
       def player

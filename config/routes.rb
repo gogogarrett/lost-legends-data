@@ -4,7 +4,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :zones,             only: [:index, :show]
       resources :battles,           only: [:show]
-      resources :player_battles,    only: [:show, :create, :update, :destroy]
+      resources :player_battles do#,    only: [:show, :create, :update, :destroy]
+        member do
+          post :attack
+        end
+      end
       resources :monsters,          only: [:show]
       resources :players,           only: [:show, :update]
       resources :items,             only: [:index, :show]
