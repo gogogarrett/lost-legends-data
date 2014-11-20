@@ -32,14 +32,16 @@ ActiveRecord::Schema.define(version: 20141115232814) do
 
   create_table "players", force: true do |t|
     t.string   "title"
-    t.integer  "exp",             default: 0, null: false
-    t.integer  "hunts",           default: 0, null: false
-    t.integer  "rubies",          default: 0, null: false
-    t.integer  "level",           default: 0, null: false
-    t.integer  "muscle",          default: 0, null: false
-    t.integer  "intellect",       default: 0, null: false
-    t.integer  "defense",         default: 0, null: false
-    t.integer  "spending_points", default: 3, null: false
+    t.integer  "exp",             default: 0,  null: false
+    t.integer  "hunts",           default: 0,  null: false
+    t.integer  "rubies",          default: 0,  null: false
+    t.integer  "level",           default: 0,  null: false
+    t.integer  "max_health",      default: 10, null: false
+    t.integer  "current_health",  default: 10, null: false
+    t.integer  "muscle",          default: 0,  null: false
+    t.integer  "intellect",       default: 0,  null: false
+    t.integer  "defense",         default: 0,  null: false
+    t.integer  "spending_points", default: 3,  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -8,6 +8,10 @@ module PlayerRepresenter
   property :hunts
   property :rubies
 
+  property :max_health
+  property :current_health
+  property :health_progress, getter: -> (args) { CalculatePlayerHealth.new(self).health_progress }
+
   property :muscle
   property :intellect
   property :defense
