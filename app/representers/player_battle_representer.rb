@@ -6,26 +6,18 @@ module PlayerBattleRepresenter
   property :id
   property :monster_id, as: :monster
   property :player_id, as: :player
-
-  # [g] these are gross. wrap in an OpenStruct before here..?
-  property :exp, getter: -> (args) do
-    args[:data][:exp] if args[:data] && args[:data][:exp]
-  end
-  property :items, getter: -> (args) do
-    args[:data][:items] if args[:data] && args[:data][:items]
-  end
-  property :rubies, getter: -> (args) do
-    args[:data][:rubies] if args[:data] && args[:data][:rubies]
-  end
-
   property :status
   property :zone
   property :monster_health
 
-  property :attack_damage, getter: -> (args) { 1 }
-  property :player_damage, getter: -> (args) { 10 }
+  property :exp
+  property :items
+  property :rubies
+  property :attack_damage
+  property :player_damage
 
+  # [g] fix this
   def zone
-    battle.zone
+    battle.zone rescue 6
   end
 end
