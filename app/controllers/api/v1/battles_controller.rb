@@ -3,6 +3,7 @@ module Api
     class BattlesController < ApplicationController
       respond_to :json
 
+      # [g] refactor me. this is outdated
       def show
         battle = Battle.find(params[:id])
         battle_result = ::Workflow::CreateBattleResult.new(battle, player).call
