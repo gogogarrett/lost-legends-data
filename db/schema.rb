@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20141115232814) do
     t.integer  "player_id",                              null: false
     t.integer  "monster_id",                             null: false
     t.string   "status",         default: "in-progress", null: false
+    t.integer  "level",          default: 0,             null: false
     t.integer  "monster_health",                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
