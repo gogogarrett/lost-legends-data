@@ -4,7 +4,7 @@ class CalculatePlayerHealth
   end
 
   def health_progress
-    (current_health / max_health * 100).floor
+    (current_health.to_f / max_health.to_f * 100).floor
   end
 
   private
