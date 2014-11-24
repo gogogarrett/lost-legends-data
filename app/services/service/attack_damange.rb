@@ -11,7 +11,7 @@ module Service
     private
 
     def random_number
-      (1..15).to_a.sample
+      (1..2).to_a.sample
     end
 
     attr_reader :monster, :battle_level
