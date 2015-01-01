@@ -1,4 +1,4 @@
-require 'representable/json'
+require "representable/json"
 
 module PlayerBattleRepresenter
   include Representable::JSON
@@ -6,30 +6,18 @@ module PlayerBattleRepresenter
   property :id
   property :monster_id, as: :monster
   property :player_id, as: :player
-  property :exp
-  property :rubies
   property :status
   property :zone
+  property :monster_health
 
-  # property :items
-  property :items, getter: -> (args) {
-    if items = args[:items]
-      items unless items.any?(&:nil?)
-    else
-      items = represented.items
-      items unless items.any?(&:nil?)
-    end
-  }
+  property :exp
+  property :items
+  property :rubies
+  property :attack_damage
+  property :player_damage
 
+  # [g] fix this
   def zone
-    battle.zone
-  end
-
-  def rubies
-    ::Service::RewardRubies.new(Player.find(1), 1).call if status == "won"
-  end
-
-  def exp
-    ::Service::RewardExp.new(Player.find(1), 1).call if status == "won"
+    battle.zone rescue 6
   end
 end

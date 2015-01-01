@@ -40,6 +40,7 @@ class SetupDatabase < ActiveRecord::Migration
       t.integer :player_id, null: false
       t.integer :monster_id, null: false
       t.string :status, null: false, default: "in-progress"
+      t.integer :level, null: false, default: 0
 
       t.integer :monster_health,  null: false
 

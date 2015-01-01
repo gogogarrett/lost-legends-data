@@ -6,4 +6,5 @@ module MonsterRepresenter
   property :id
   property :title
   property :desc
+  property :health
 end
